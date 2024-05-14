@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
     registerRepeatPasswordInput.addEventListener('input', function ()
     {
-        if (passwordInput.value !== repeatPasswordInput.value)
+        if (registerPasswordInput.value !== registerRepeatPasswordInput.value)
             registerRepeatPasswordInput.classList.add('invalid-field');
         else
             registerRepeatPasswordInput.classList.add('invalid-field');
@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', function ()
             registerErrorSpan.textContent = 'Already registered email';
         else if (!isStrongPassword(enteredPassword))
             registerErrorSpan.textContent = 'Invalid password format';
-        else if (passwordInput.value.localeCompare(repeatPasswordInput.value))
+        else if (enteredPassword.localeCompare(repeatPassword))
             registerErrorSpan.textContent = 'Passwords do not match';
         else
-            window.location.href = 'home.html';
+            window.location.href = 'success.html';
     });
 });

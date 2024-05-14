@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function ()
 
     const loginEmailInput = document.querySelector('.login-email');
     const loginPasswordInput = document.querySelector('.login-password');
-    const loginErrorSpan = document.querySelector('.register-error');
+    const loginErrorSpan = document.querySelector('.login-error');
 
     document.querySelector('.login-btn').addEventListener('click', function (event)
     {
